@@ -18,13 +18,13 @@ Processor load<br><br>
 
 <div align="center">
 <a href="https://github.com/markovuser/Information-in-Desktop/releases/latest"><img src="https://img.shields.io/github/v/release/markovuser/Information-in-Desktop?style=for-the-badge&labelColor=3d3d3d&color=179962" alt="Version"></a>
-<a href="https://github.com/markovuser/Information-in-Desktop/releases/latest/download/Information.in.Desktop.setup.exe"><img src="https://img.shields.io/github/downloads/markovuser/Information-in-Desktop/total?style=for-the-badge&logo=github&color=blue" alt="Downloads"></a>
+<a href="https://github.com/markovuser/Information-in-Desktop/releases/latest/download/Information-in-Desktop-setup.exe"><img src="https://img.shields.io/github/downloads/markovuser/Information-in-Desktop/total?style=for-the-badge&logo=github&color=blue" alt="Downloads"></a>
 
 </div>
 <br><br>
 
 <div align="center">
   
-[<img src="https://raw.githubusercontent.com/markovuser/Information-in-Desktop/main/assets/download.png" width="250" alt="Download">](https://github.com/markovuser/Information-in-Desktop/releases/latest/download/Information.in.Desktop.setup.exe)
+[<img src="https://raw.githubusercontent.com/markovuser/Information-in-Desktop/main/assets/download.png" width="250" alt="Download">](https://github.com/markovuser/Information-in-Desktop/releases/latest/download/Information-in-Desktop-setup.exe)
 
 </div>
