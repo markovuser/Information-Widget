@@ -25,6 +25,6 @@ Processor load<br><br>
 
 <div align="center">
   
-[<img src="https://raw.githubusercontent.com/markovuser/Information-in-Desktop/main/assets/download.png" width="250" alt="Download">](https://github.com/markovuser/Information-in-Desktop/releases/latest/download/Information-in-Desktop-setup.exe)
+[<img src="https://raw.githubusercontent.com/markovuser/Information-in-Desktop/main/assets/download.png" width="250" alt="Download" title="Installer">](https://github.com/markovuser/Information-in-Desktop/releases/latest/download/Information-in-Desktop-setup.exe)
 
 </div>
