@@ -1,5 +1,5 @@
 <div align="center">
-# Information in Desktop
+<h1># Information in Desktop</h1>
 </div>
 <div align=center>
   [En]<br>
