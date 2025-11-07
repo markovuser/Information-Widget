@@ -39,3 +39,11 @@ IP-адрес компьютера<br>
 [<img src="https://raw.githubusercontent.com/markovuser/Information-in-Desktop/main/assets/download.png" width="250" alt="Download" title="Installer">](https://github.com/markovuser/Information-in-Desktop/releases/latest/download/Information-in-Desktop-setup.exe)
 
 </div>
+
+<div align="center">
+  
+## 📫 Contacts/Контакты
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:markov.user@gmail.com)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/markovuser)
+
+</div>
