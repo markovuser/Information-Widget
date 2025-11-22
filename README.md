@@ -22,7 +22,7 @@ IP-адрес компьютера<br>
 </div>
 <hr>
 <div align="center">
-  <img src=https://raw.githubusercontent.com/markovuser/Information-Widget/assets/IID1.jpg><br>
+  <img src=https://raw.githubusercontent.com/markovuser/Information-Widget/main/assets/IID1.jpg><br>
   <img src=https://raw.githubusercontent.com/markovuser/Information-Widget/main/assets/IID2.jpg>
   <img src=https://raw.githubusercontent.com/markovuser/Information-Widget/main/assets/IID3.jpg><br><br>
 </div>
