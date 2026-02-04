@@ -22,9 +22,9 @@ IP-адрес компьютера<br>
 </div>
 <hr>
 <div align="center">
-  <img src=https://raw.githubusercontent.com/markovuser/Information-Widget/main/assets/IID1.jpg><br>
-  <img src=https://raw.githubusercontent.com/markovuser/Information-Widget/main/assets/IID2.jpg>
-  <img src=https://raw.githubusercontent.com/markovuser/Information-Widget/main/assets/IID3.jpg><br><br>
+  <img src=https://raw.githubusercontent.com/markovuser/Information-Widget/main/assets/app-1.png><br>
+  <img src=https://raw.githubusercontent.com/markovuser/Information-Widget/main/assets/app-2.png>
+  <img src=https://raw.githubusercontent.com/markovuser/Information-Widget/main/assets/app-3.png><br><br>
 </div>
 <hr>
 <div align="center">
