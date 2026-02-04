@@ -36,7 +36,8 @@ IP-адрес компьютера<br>
 
 <div align="center">
   
-[<img src="https://raw.githubusercontent.com/markovuser/Information-Widget/main/assets/download.png" width="250" alt="Download" title="Installer">](https://github.com/markovuser/Information-Widget/releases/latest/download/Information-Widget-setup.exe)
+[<img src="https://raw.githubusercontent.com/markovuser/Information-Widget/main/assets/download.png" width="250" alt="Download" title="Installer">](https://github.com/markovuser/Information-Widget/releases/latest/download/Information-Widget-setup.exe)<br>
+[<img src="https://raw.githubusercontent.com/markovuser/Information-Widget/main/assets/downloadport.png" width="250" alt="Download" title="Portable">](https://github.com/markovuser/Information-Widget/releases/latest/download/Information.Widget.zip)
 
 </div>
 
