@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.819,=D:\Delphi Programs\Information in Desktop\Units\uTotalCpuUsagePct\uTotalCpuUsagePct.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.649,D:\Delphi Programs\Information in Desktop\Units\uTotalCpuUsagePct\uTotalCpuUsagePct.pas=</Transaction>
     <Transaction>1899.12.30 00:00:00.000.686,D:\Delphi Programs\Information in Desktop\Units\uTotalCpuUsagePct\uTotalCpuUsagePct.pas=</Transaction>
     <Transaction>1899.12.30 00:00:00.000.893,=D:\Delphi Programs\Information in Desktop\Units\uTotalCpuUsagePct\uTotalCpuUsagePct.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.819,=D:\Delphi Programs\Information in Desktop\Units\uTotalCpuUsagePct\uTotalCpuUsagePct.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.969,=D:\Delphi Programs\Information Widget\InformationWidget\assets\DigitalDisplayRegular-ODEO.ttf</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.364,D:\Delphi Programs\Information in Desktop\Units\lng\Internationalization.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.384,=D:\Delphi Programs\Information in Desktop\Units\Internationalization\Internationalization.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.977,D:\Delphi Programs\Information Widget\InformationInDesktop.dproj=D:\Delphi Programs\Information Widget\InformationWidget.dproj</Transaction>
     <Transaction>1899.12.30 00:00:00.000.734,=D:\Delphi Programs\Information in Desktop\Unit_Update\Unit_Update.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.384,=D:\Delphi Programs\Information in Desktop\Units\Internationalization\Internationalization.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.364,D:\Delphi Programs\Information in Desktop\Units\lng\Internationalization.pas=</Transaction>
     <Transaction>1899.12.30 00:00:00.000.055,=D:\Delphi Programs\Information in Desktop\Unit_Settings\Unit_Settings.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.551,D:\Delphi Programs\Information in Desktop\Units\Translation\Translation.pas=D:\Delphi Programs\Information in Desktop\Units\Internationalization\Internationalization.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.456,=D:\Delphi Programs\Information in Desktop\Units\adCpuUsage\adCpuUsage.pas</Transaction>

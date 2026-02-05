@@ -77,6 +77,7 @@ type
     RadioButtonRight: TRadioButton;
     CheckBoxAutoColor: TCheckBox;
     CheckBoxIgnoreMouse: TCheckBox;
+    CheckBoxShowFrame: TCheckBox;
     procedure FormCreate(Sender: TObject);
     procedure CheckBoxComputerNameClick(Sender: TObject);
     procedure CheckBoxIPClick(Sender: TObject);
@@ -140,6 +141,7 @@ type
     procedure PageControl1MouseLeave(Sender: TObject);
     function IsMouseIgnored: Boolean;
     procedure CheckBoxIgnoreMouseClick(Sender: TObject);
+    procedure CheckBoxShowFrameClick(Sender: TObject);
   private
     { Private declarations }
 
@@ -589,6 +591,9 @@ begin
   // Блокировка положения окна
   Form2.CheckBoxIgnoreMouse.Checked := Ini.ReadBool('Option', CheckBoxIgnoreMouse.Name, false);
   Form2.CheckBoxIgnoreMouseClick(Self);
+  //Рамка окна
+  Form2.CheckBoxShowFrame.Checked := Ini.ReadBool('Option', CheckBoxShowFrame.Name, false);
+  Form2.CheckBoxShowFrameClick(Self);
   // Размерт шрифта
   WindowsVersionFontSize.Value := Ini.ReadInteger('Option', WindowsVersionFontSize.Name, WindowsVersionFontSize.Value);
   Form2.WindowsVersionFontSizeChange(self);
@@ -948,6 +953,19 @@ begin
   CheckRAMFontBold.Enabled := CheckBoxRAM.Checked;
   RestoreStringInfo;
   application.ProcessMessages;
+end;
+
+procedure TForm2.CheckBoxShowFrameClick(Sender: TObject);
+begin
+  if CheckBoxShowFrame.Checked then
+  begin
+    Form1.RoundedCorners := rcOn;
+  end;
+
+  if CheckBoxShowFrame.Checked = false then
+  begin
+    Form1.RoundedCorners := rcOff;
+  end;
 end;
 
 procedure TForm2.CheckBoxWindowsVersionClick(Sender: TObject);

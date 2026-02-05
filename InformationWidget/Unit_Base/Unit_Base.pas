@@ -901,6 +901,7 @@ Begin
   Ini.WriteBool('Option', Form2.CheckCPUFontBold.name, Form2.CheckCPUFontBold.Checked);
   Ini.WriteBool('Option', Form2.CheckBatteryFontBold.name, Form2.CheckBatteryFontBold.Checked);
   Ini.WriteInteger('Option', Form2.ColorBoxNumber.Name, Form2.ColorBoxNumber.Selected);
+  Ini.WriteBool('Option', Form2.CheckBoxShowFrame.Name, Form2.CheckBoxShowFrame.Checked);
 
   Ini.WriteInteger('Option', 'Top', Form1.Top);
   Ini.WriteInteger('Option', 'Left', Form1.Left);

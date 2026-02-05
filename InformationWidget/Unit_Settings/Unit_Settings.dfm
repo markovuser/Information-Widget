@@ -94,7 +94,7 @@ object Form2: TForm2
         Left = 0
         Top = 0
         Width = 326
-        Height = 73
+        Height = 100
         Align = alTop
         Caption = #1042#1080#1076
         TabOrder = 0
@@ -143,15 +143,26 @@ object Form2: TForm2
           TabOrder = 3
           OnClick = CheckBoxIgnoreMouseClick
         end
+        object CheckBoxShowFrame: TCheckBox
+          Left = 4
+          Top = 75
+          Width = 150
+          Height = 17
+          Cursor = crHandPoint
+          Caption = #1055#1086#1082#1072#1079#1072#1090#1100' '#1088#1072#1084#1082#1091' (W11)'
+          TabOrder = 4
+          OnClick = CheckBoxShowFrameClick
+        end
       end
       object GroupBox3: TGroupBox
         Left = 0
-        Top = 73
+        Top = 100
         Width = 326
-        Height = 55
+        Height = 70
         Align = alTop
         Caption = #1055#1086#1083#1086#1078#1077#1085#1080#1077' '#1086#1082#1085#1072
         TabOrder = 1
+        ExplicitTop = 106
         object RadioButtonDefaultPosition: TRadioButton
           Left = 4
           Top = 17
@@ -166,7 +177,7 @@ object Form2: TForm2
         end
         object RadioButtonLastPosition: TRadioButton
           Left = 4
-          Top = 35
+          Top = 45
           Width = 150
           Height = 17
           Cursor = crHandPoint
@@ -187,12 +198,13 @@ object Form2: TForm2
       end
       object GroupBox4: TGroupBox
         Left = 0
-        Top = 128
+        Top = 170
         Width = 326
         Height = 44
         Align = alTop
         Caption = #1040#1074#1090#1086#1079#1072#1075#1088#1091#1079#1082#1072
         TabOrder = 2
+        ExplicitTop = 128
         object CheckBoxAutostart: TCheckBox
           Left = 4
           Top = 17
