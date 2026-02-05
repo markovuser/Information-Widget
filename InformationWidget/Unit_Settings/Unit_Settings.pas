@@ -1,15 +1,16 @@
-﻿Unit Unit_Settings;
+﻿unit Unit_Settings;
 
-Interface
+interface
 
-Uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes,
-  Vcl.Graphics, ShellApi, Vcl.Controls, Vcl.Forms, Vcl.Dialogs, StdCtrls, Vcl.ComCtrls,
-  Vcl.ExtCtrls, WindowsDarkMode, IniFiles, Registry, Vcl.Samples.Spin, Vcl.Grids,
-  Vcl.Buttons, Vcl.Menus, System.UITypes, System.Types, Math;
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics, ShellApi, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  StdCtrls, Vcl.ComCtrls, Vcl.ExtCtrls, WindowsDarkMode, IniFiles, Registry,
+  Vcl.Samples.Spin, Vcl.Grids, Vcl.Buttons, Vcl.Menus, System.UITypes,
+  System.Types, Math;
 
-Type
-  TForm2 = Class(TForm)
+type
+  TForm2 = class(TForm)
     TabControlButtons: TTabControl;
     ButtonSave: TButton;
     TabControlBody: TTabControl;
@@ -76,508 +77,514 @@ Type
     RadioButtonRight: TRadioButton;
     CheckBoxAutoColor: TCheckBox;
     CheckBoxIgnoreMouse: TCheckBox;
-    Procedure FormCreate(Sender: TObject);
-    Procedure CheckBoxComputerNameClick(Sender: TObject);
-    Procedure CheckBoxIPClick(Sender: TObject);
-    Procedure ButtonSaveClick(Sender: TObject);
-    Procedure CheckBoxBatteryClick(Sender: TObject);
-    Procedure CheckBoxRAMClick(Sender: TObject);
-    Procedure CheckBoxCPUClick(Sender: TObject);
-    Procedure CheckBoxDateTimeClick(Sender: TObject);
-    Procedure RadioButtonDefaultPositionClick(Sender: TObject);
-    Procedure RadioButtonLastPositionClick(Sender: TObject);
-    Procedure LoadNastr;
-    Procedure RestoreStringInfo;
-    Procedure CreateAutoStart(Enabled: Boolean);
-    Procedure CheckAutoStart;
-    Procedure CheckBoxColorTrayIconClick(Sender: TObject);
-    Procedure CheckBoxAutostartClick(Sender: TObject);
-    Procedure ComputerNameFontSizeChange(Sender: TObject);
-    Procedure IPFontSizeChange(Sender: TObject);
-    Procedure DateTimeFontSizeChange(Sender: TObject);
-    Procedure CPUFontSizeChange(Sender: TObject);
-    Procedure ComputerNameFontSizeKeyPress(Sender: TObject; Var Key: Char);
-    Procedure IPFontSizeKeyPress(Sender: TObject; Var Key: Char);
-    Procedure DateTimeFontSizeKeyPress(Sender: TObject; Var Key: Char);
-    Procedure CPUFontSizeKeyPress(Sender: TObject; Var Key: Char);
-    Procedure CheckComputerNameFontBoldClick(Sender: TObject);
-    Procedure CheckIPFontBoldClick(Sender: TObject);
-    Procedure CheckDateTimeFontBoldClick(Sender: TObject);
-    Procedure CheckCPUFontBoldClick(Sender: TObject);
-    Procedure RAMFontSizeChange(Sender: TObject);
-    Procedure CheckRAMFontBoldClick(Sender: TObject);
-    Procedure BatteryFontSizeChange(Sender: TObject);
-    Procedure CheckBatteryFontBoldClick(Sender: TObject);
-    Procedure RAMFontSizeKeyPress(Sender: TObject; Var Key: Char);
-    Procedure BatteryFontSizeKeyPress(Sender: TObject; Var Key: Char);
-    Procedure CheckBoxWindowsVersionClick(Sender: TObject);
-    Procedure ColorBoxNumberClick(Sender: TObject);
-    Procedure FormMouseWheel(Sender: TObject; Shift: TShiftState; WheelDelta: Integer; MousePos: TPoint; Var Handled: Boolean);
-    Procedure WindowsVersionFontSizeChange(Sender: TObject);
-    Procedure WindowsVersionFontSizeKeyPress(Sender: TObject; Var Key: Char);
-    Procedure WindowsVersionFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-    Procedure ComputerNameFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-    Procedure IPFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-    Procedure CPUFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-    Procedure RAMFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-    Procedure BatteryFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-    Procedure DateTimeFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-    Procedure CheckBoxFullWindowsVersionClick(Sender: TObject);
-    Procedure CheckBoxDateClick(Sender: TObject);
-    Procedure CheckBoxDayClick(Sender: TObject);
-    Procedure DateFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-    Procedure DateFontSizeKeyPress(Sender: TObject; Var Key: Char);
-    Procedure DayFontSizeKeyPress(Sender: TObject; Var Key: Char);
-    Procedure DayFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-    Procedure CheckDateFontBoldClick(Sender: TObject);
-    Procedure CheckDayFontBoldClick(Sender: TObject);
-    Procedure DateFontSizeChange(Sender: TObject);
-    Procedure DayFontSizeChange(Sender: TObject);
-    Procedure RadioButtonRightClick(Sender: TObject);
-    Procedure CheckBoxAutoColorClick(Sender: TObject);
-    Procedure PageControl1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
-    Procedure PageControl1MouseLeave(Sender: TObject);
-    Function IsMouseIgnored: Boolean;
-    Procedure CheckBoxIgnoreMouseClick(Sender: TObject);
-  Private
+    procedure FormCreate(Sender: TObject);
+    procedure CheckBoxComputerNameClick(Sender: TObject);
+    procedure CheckBoxIPClick(Sender: TObject);
+    procedure ButtonSaveClick(Sender: TObject);
+    procedure CheckBoxBatteryClick(Sender: TObject);
+    procedure CheckBoxRAMClick(Sender: TObject);
+    procedure CheckBoxCPUClick(Sender: TObject);
+    procedure CheckBoxDateTimeClick(Sender: TObject);
+    procedure RadioButtonDefaultPositionClick(Sender: TObject);
+    procedure RadioButtonLastPositionClick(Sender: TObject);
+    procedure LoadNastr;
+    procedure RestoreStringInfo;
+    procedure CreateAutoStart(Enabled: Boolean);
+    procedure CheckAutoStart;
+    procedure CheckBoxColorTrayIconClick(Sender: TObject);
+    procedure CheckBoxAutostartClick(Sender: TObject);
+    procedure ComputerNameFontSizeChange(Sender: TObject);
+    procedure IPFontSizeChange(Sender: TObject);
+    procedure DateTimeFontSizeChange(Sender: TObject);
+    procedure CPUFontSizeChange(Sender: TObject);
+    procedure ComputerNameFontSizeKeyPress(Sender: TObject; var Key: Char);
+    procedure IPFontSizeKeyPress(Sender: TObject; var Key: Char);
+    procedure DateTimeFontSizeKeyPress(Sender: TObject; var Key: Char);
+    procedure CPUFontSizeKeyPress(Sender: TObject; var Key: Char);
+    procedure CheckComputerNameFontBoldClick(Sender: TObject);
+    procedure CheckIPFontBoldClick(Sender: TObject);
+    procedure CheckDateTimeFontBoldClick(Sender: TObject);
+    procedure CheckCPUFontBoldClick(Sender: TObject);
+    procedure RAMFontSizeChange(Sender: TObject);
+    procedure CheckRAMFontBoldClick(Sender: TObject);
+    procedure BatteryFontSizeChange(Sender: TObject);
+    procedure CheckBatteryFontBoldClick(Sender: TObject);
+    procedure RAMFontSizeKeyPress(Sender: TObject; var Key: Char);
+    procedure BatteryFontSizeKeyPress(Sender: TObject; var Key: Char);
+    procedure CheckBoxWindowsVersionClick(Sender: TObject);
+    procedure ColorBoxNumberClick(Sender: TObject);
+    procedure FormMouseWheel(Sender: TObject; Shift: TShiftState; WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
+    procedure WindowsVersionFontSizeChange(Sender: TObject);
+    procedure WindowsVersionFontSizeKeyPress(Sender: TObject; var Key: Char);
+    procedure WindowsVersionFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure ComputerNameFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure IPFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure CPUFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure RAMFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure BatteryFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure DateTimeFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure CheckBoxFullWindowsVersionClick(Sender: TObject);
+    procedure CheckBoxDateClick(Sender: TObject);
+    procedure CheckBoxDayClick(Sender: TObject);
+    procedure DateFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure DateFontSizeKeyPress(Sender: TObject; var Key: Char);
+    procedure DayFontSizeKeyPress(Sender: TObject; var Key: Char);
+    procedure DayFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure CheckDateFontBoldClick(Sender: TObject);
+    procedure CheckDayFontBoldClick(Sender: TObject);
+    procedure DateFontSizeChange(Sender: TObject);
+    procedure DayFontSizeChange(Sender: TObject);
+    procedure RadioButtonRightClick(Sender: TObject);
+    procedure CheckBoxAutoColorClick(Sender: TObject);
+    procedure PageControl1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+    procedure PageControl1MouseLeave(Sender: TObject);
+    function IsMouseIgnored: Boolean;
+    procedure CheckBoxIgnoreMouseClick(Sender: TObject);
+  private
     { Private declarations }
 
-  Public
+  public
     { Public declarations }
-  Protected
+  protected
+    procedure CreateParams(var Params: TCreateParams); override;
+  end;
 
-  End;
-
-Var
+var
   Form2: TForm2;
   i: Int64;
 
-Implementation
+implementation
 
 {$R *.dfm}
 
-Uses
+uses
   Unit_Base, Unit_Update;
 
-Function TForm2.IsMouseIgnored: Boolean;
-Begin
-  Result := CheckBoxIgnoreMouse.Checked;
-End;
+procedure TForm2.CreateParams(var Params: TCreateParams);
+begin
+  inherited CreateParams(Params);
+  Params.ExStyle := Params.ExStyle or WS_EX_APPWINDOW;
+  Params.WndParent := GetDesktopWindow;
+end;
 
-Procedure TForm2.BatteryFontSizeChange(Sender: TObject);
-Begin
+function TForm2.IsMouseIgnored: Boolean;
+begin
+  Result := CheckBoxIgnoreMouse.Checked;
+end;
+
+procedure TForm2.BatteryFontSizeChange(Sender: TObject);
+begin
   Form1.ELabelBattery.Font.Size := BatteryFontSize.Value;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.BatteryFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-Begin
-  If Not (Key In [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) Then
-  Begin
+procedure TForm2.BatteryFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+  if not (Key in [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) then
+  begin
     Key := 0;
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.BatteryFontSizeKeyPress(Sender: TObject; Var Key: Char);
-Begin
+procedure TForm2.BatteryFontSizeKeyPress(Sender: TObject; var Key: Char);
+begin
   Key := #0;
-End;
+end;
 
-
-Function LoadResourceFontByName(Const ResourceName: String; ResType: PChar): Boolean;
-Var
+function LoadResourceFontByName(const ResourceName: string; ResType: PChar): Boolean;
+var
   ResStream: TResourceStream;
   FontsCount: DWORD;
-Begin
+begin
   ResStream := TResourceStream.Create(hInstance, ResourceName, ResType);
-  Try
-    Result := (AddFontMemResourceEx(ResStream.Memory, ResStream.Size, Nil, @FontsCount) <> 0);
-  Finally
+  try
+    Result := (AddFontMemResourceEx(ResStream.Memory, ResStream.Size, nil, @FontsCount) <> 0);
+  finally
     ResStream.Free;
-  End;
-End;
+  end;
+end;
 
-Function LoadResourceFontByID(ResourceID: Integer; ResType: PChar): Boolean;
-Var
+function LoadResourceFontByID(ResourceID: Integer; ResType: PChar): Boolean;
+var
   ResStream: TResourceStream;
   FontsCount: DWORD;
-Begin
+begin
   ResStream := TResourceStream.CreateFromID(hInstance, ResourceID, ResType);
-  Try
-    Result := (AddFontMemResourceEx(ResStream.Memory, ResStream.Size, Nil, @FontsCount) <> 0);
-  Finally
+  try
+    Result := (AddFontMemResourceEx(ResStream.Memory, ResStream.Size, nil, @FontsCount) <> 0);
+  finally
     ResStream.Free;
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.ButtonSaveClick(Sender: TObject);
-Begin
+procedure TForm2.ButtonSaveClick(Sender: TObject);
+begin
   //Form1.SaveNastr;
   Form1.SaveControls;
   application.ProcessMessages;
   Form2.Close;
-End;
+end;
 
-Procedure TForm2.CheckAutoStart;
-Var
+procedure TForm2.CheckAutoStart;
+var
   Reg: TRegistry;
-Begin
+begin
   Reg := TRegistry.Create;
   Reg.RootKey := HKEY_CURRENT_USER;
   Reg.OpenKey('Software\Microsoft\Windows\CurrentVersion\Run', TRUE);
 
-  If (Reg.ValueExists(Application.Title) = TRUE) And (Reg.ReadString(Application.Title) = (ParamStr(0))) Then
-  Begin
+  if (Reg.ValueExists(Application.Title) = TRUE) and (Reg.ReadString(Application.Title) = (ParamStr(0))) then
+  begin
     Form2.CheckBoxAutostart.Checked := TRUE;
-  End;
+  end;
 
-  If (Reg.ValueExists(Application.Title) = TRUE) And (Reg.ReadString(Application.Title) <> (ParamStr(0))) Then
-  Begin
+  if (Reg.ValueExists(Application.Title) = TRUE) and (Reg.ReadString(Application.Title) <> (ParamStr(0))) then
+  begin
     Form2.CheckBoxAutostart.Checked := false;
-  End;
+  end;
 
-  If Reg.ValueExists(Application.Title) = false Then
-  Begin
+  if Reg.ValueExists(Application.Title) = false then
+  begin
     Form2.CheckBoxAutostart.Checked := false;
-  End;
+  end;
   Reg.CloseKey;
   Reg.Free;
-End;
+end;
 
 // Версия Windows
-Function Is64BitOS: Boolean;
-Var
-  IsWow64Process: Function(hProcess: THandle; Var Wow64Process: BOOL): BOOL; Stdcall;
+function Is64BitOS: Boolean;
+var
+  IsWow64Process: function(hProcess: THandle; var Wow64Process: BOOL): BOOL; stdcall;
   Wow64Process: BOOL;
-Begin
+begin
   Result := False;
 
   // Для современных версий Delphi
-  If TOSVersion.Architecture In [arIntelX64, arARM64] Then
+  if TOSVersion.Architecture in [arIntelX64, arARM64] then
     Exit(true);
 
   // Для старых версий
   IsWow64Process := GetProcAddress(GetModuleHandle('kernel32'), 'IsWow64Process');
-  If Assigned(IsWow64Process) Then
-  Begin
+  if Assigned(IsWow64Process) then
+  begin
     Wow64Process := False;
-    If IsWow64Process(GetCurrentProcess, Wow64Process) Then
+    if IsWow64Process(GetCurrentProcess, Wow64Process) then
       Result := Wow64Process;
-  End;
-End;
+  end;
+end;
 
-Function GetWindowsInfoShort: String;
-Var
+function GetWindowsInfoShort: string;
+var
   Reg: TRegistry;
-  DisplayVersion: String;
+  DisplayVersion: string;
   CurrentBuild, UBR: Integer;
-  OSName: String;
-  Bitness: String;
-Begin
+  OSName: string;
+  Bitness: string;
+begin
   DisplayVersion := '';
   CurrentBuild := 0;
   UBR := 0;
 
   Reg := TRegistry.Create(KEY_READ);
-  Try
+  try
     Reg.RootKey := HKEY_LOCAL_MACHINE;
-    If Reg.OpenKey('SOFTWARE\Microsoft\Windows NT\CurrentVersion', False) Then
-    Begin
+    if Reg.OpenKey('SOFTWARE\Microsoft\Windows NT\CurrentVersion', False) then
+    begin
       DisplayVersion := Reg.ReadString('DisplayVersion');
       CurrentBuild := StrToIntDef(Reg.ReadString('CurrentBuildNumber'), 0);
       UBR := Reg.ReadInteger('UBR');
-    End;
-  Finally
+    end;
+  finally
     Reg.Free;
-  End;
+  end;
 
   // Определяем версию Windows
-  If CurrentBuild >= 22000 Then
+  if CurrentBuild >= 22000 then
     OSName := 'Windows 11'
-  Else
+  else
     OSName := 'Windows 10';
 
   // Определяем разрядность
-  If Is64BitOS Then
+  if Is64BitOS then
     Bitness := '64'
-  Else
+  else
     Bitness := '32';
 
   Result := Trim(Format('%s %s-bit [%s] %d.%d', [OSName, Bitness, DisplayVersion, CurrentBuild, UBR]));
-End;
+end;
 
-Function GetWindowsInfoShortSmall: String;
-Var
+function GetWindowsInfoShortSmall: string;
+var
   Reg: TRegistry;
-  DisplayVersion: String;
+  DisplayVersion: string;
   CurrentBuild, UBR: Integer;
-  OSName: String;
-  Bitness: String;
-Begin
+  OSName: string;
+  Bitness: string;
+begin
   DisplayVersion := '';
   CurrentBuild := 0;
   UBR := 0;
 
   Reg := TRegistry.Create(KEY_READ);
-  Try
+  try
     Reg.RootKey := HKEY_LOCAL_MACHINE;
-    If Reg.OpenKey('SOFTWARE\Microsoft\Windows NT\CurrentVersion', False) Then
-    Begin
+    if Reg.OpenKey('SOFTWARE\Microsoft\Windows NT\CurrentVersion', False) then
+    begin
       DisplayVersion := Reg.ReadString('DisplayVersion');
       CurrentBuild := StrToIntDef(Reg.ReadString('CurrentBuildNumber'), 0);
       UBR := Reg.ReadInteger('UBR');
-    End;
-  Finally
+    end;
+  finally
     Reg.Free;
-  End;
+  end;
 
   // Определяем версию Windows
-  If CurrentBuild >= 22000 Then
+  if CurrentBuild >= 22000 then
     OSName := 'Windows 11'
-  Else
+  else
     OSName := 'Windows 10';
 
   // Определяем разрядность
-  If Is64BitOS Then
+  if Is64BitOS then
     Bitness := '64'
-  Else
+  else
     Bitness := '32';
 
   Result := Trim(Format('%s [%s] %d', [OSName, DisplayVersion, UBR]));
-End;
+end;
 
-Procedure TForm2.LoadNastr;
-Var
+procedure TForm2.LoadNastr;
+var
   Ini: TMemIniFile;
-Begin
+begin
   // Автозагрузка
 
   CheckAutoStart;
   Ini := TMemIniFile.Create(Form1.PortablePath);
 
   Form2.CheckBoxFullWindowsVersion.Checked := Ini.ReadBool('Option', Form2.CheckBoxFullWindowsVersion.Name, false);
-  If Form2.CheckBoxFullWindowsVersion.Checked Then
-  Begin
+  if Form2.CheckBoxFullWindowsVersion.Checked then
+  begin
     Form1.LabelWindowsVersion.Caption := Trim(GetWindowsInfoShort);
-  End;
-  If Form2.CheckBoxFullWindowsVersion.Checked = false Then
-  Begin
+  end;
+  if Form2.CheckBoxFullWindowsVersion.Checked = false then
+  begin
     Form1.LabelWindowsVersion.Caption := Trim(GetWindowsInfoShortSmall);
-  End;
+  end;
   // Положение окна
   Form2.RadioButtonDefaultPosition.Checked := Ini.ReadBool('Option', Form2.RadioButtonDefaultPosition.Name, false);
-  If Form2.RadioButtonDefaultPosition.Checked = TRUE Then
-  Begin
+  if Form2.RadioButtonDefaultPosition.Checked = TRUE then
+  begin
     Form2.RadioButtonDefaultPositionClick(self);
-  End;
+  end;
 
   Form2.RadioButtonLastPosition.Checked := Ini.ReadBool('Option', Form2.RadioButtonLastPosition.Name, false);
-  If Form2.RadioButtonLastPosition.Checked = TRUE Then
-  Begin
+  if Form2.RadioButtonLastPosition.Checked = TRUE then
+  begin
     Form2.RadioButtonLastPositionClick(self);
-  End;
+  end;
 
   Form2.RadioButtonRight.Checked := Ini.ReadBool('Option', Form2.RadioButtonRight.Name, false);
-  If Form2.RadioButtonRight.Checked = TRUE Then
-  Begin
+  if Form2.RadioButtonRight.Checked = TRUE then
+  begin
     Form2.RadioButtonRightClick(self);
-  End;
+  end;
   // Имя компьютера
   Form2.CheckBoxComputerName.Checked := Ini.ReadBool('Option', Form2.CheckBoxComputerName.Name, false);
   Form2.CheckBoxComputerNameClick(Self);
-  If Form2.CheckBoxComputerName.Checked = TRUE Then
-  Begin
+  if Form2.CheckBoxComputerName.Checked = TRUE then
+  begin
     Form1.ALabelUserName.Visible := TRUE;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
-  If Form2.CheckBoxComputerName.Checked = false Then
-  Begin
+  end;
+  if Form2.CheckBoxComputerName.Checked = false then
+  begin
     Form1.ALabelUserName.Visible := false;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
+  end;
 
   // IP компьютера
   Form2.CheckBoxIP.Checked := Ini.ReadBool('Option', Form2.CheckBoxIP.Name, false);
   Form2.CheckBoxIPClick(self);
-  If Form2.CheckBoxIP.Checked = TRUE Then
-  Begin
+  if Form2.CheckBoxIP.Checked = TRUE then
+  begin
     Form1.BLabelGetIP.Visible := TRUE;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
-  If Form2.CheckBoxIP.Checked = false Then
-  Begin
+  end;
+  if Form2.CheckBoxIP.Checked = false then
+  begin
     Form1.BLabelGetIP.Visible := false;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
+  end;
 
   // Дата и время
   Form2.CheckBoxDateTime.Checked := Ini.ReadBool('Option', Form2.CheckBoxDateTime.Name, false);
   Form2.CheckBoxDateTimeClick(self);
-  If Form2.CheckBoxDateTime.Checked = TRUE Then
-  Begin
+  if Form2.CheckBoxDateTime.Checked = TRUE then
+  begin
     Form1.FLabelDateTime.Visible := TRUE;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
-  If Form2.CheckBoxDateTime.Checked = false Then
-  Begin
+  end;
+  if Form2.CheckBoxDateTime.Checked = false then
+  begin
     Form1.FLabelDateTime.Visible := false;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
+  end;
 
   // Батарея
   Form2.CheckBoxBattery.Checked := Ini.ReadBool('Option', Form2.CheckBoxBattery.Name, false);
   Form2.CheckBoxBatteryClick(self);
-  If (Form2.CheckBoxBattery.Checked = TRUE) Then
-  Begin
+  if (Form2.CheckBoxBattery.Checked = TRUE) then
+  begin
     Form1.ELabelBattery.Visible := TRUE;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
-  If (Form2.CheckBoxBattery.Checked = false) Then
-  Begin
+  end;
+  if (Form2.CheckBoxBattery.Checked = false) then
+  begin
     Form1.ELabelBattery.Visible := false;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
+  end;
 
   // Опреативная память
   Form2.CheckBoxRAM.Checked := Ini.ReadBool('Option', Form2.CheckBoxRAM.Name, false);
   Form2.CheckBoxRAMClick(Self);
-  If (Form2.CheckBoxRAM.Checked = TRUE) Then
-  Begin
+  if (Form2.CheckBoxRAM.Checked = TRUE) then
+  begin
     Form1.DLabelRAM.Visible := TRUE;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
-  If (Form2.CheckBoxRAM.Checked = false) Then
-  Begin
+  end;
+  if (Form2.CheckBoxRAM.Checked = false) then
+  begin
     Form1.DLabelRAM.Visible := false;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
+  end;
 
   // Процессор
   Form2.CheckBoxCPU.Checked := Ini.ReadBool('Option', Form2.CheckBoxCPU.Name, false);
   Form2.CheckBoxCPUClick(self);
-  If (Form2.CheckBoxCPU.Checked = TRUE) Then
-  Begin
+  if (Form2.CheckBoxCPU.Checked = TRUE) then
+  begin
     Form1.CLabelCPU.Visible := TRUE;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
-  If (Form2.CheckBoxCPU.Checked = false) Then
-  Begin
+  end;
+  if (Form2.CheckBoxCPU.Checked = false) then
+  begin
     Form1.CLabelCPU.Visible := false;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
+  end;
 
   // Версия Windows
   Form2.CheckBoxWindowsVersion.Checked := Ini.ReadBool('Option', Form2.CheckBoxWindowsVersion.Name, false);
   Form2.CheckBoxWindowsVersionClick(self);
-  If (Form2.CheckBoxWindowsVersion.Checked = TRUE) Then
-  Begin
+  if (Form2.CheckBoxWindowsVersion.Checked = TRUE) then
+  begin
     Form1.LabelWindowsVersion.Visible := TRUE;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
-  If (Form2.CheckBoxWindowsVersion.Checked = false) Then
-  Begin
+  end;
+  if (Form2.CheckBoxWindowsVersion.Checked = false) then
+  begin
     Form1.LabelWindowsVersion.Visible := false;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
+  end;
 
     // Дата
   Form2.CheckBoxDate.Checked := Ini.ReadBool('Option', Form2.CheckBoxDate.Name, false);
   Form2.CheckBoxDateClick(self);
-  If (Form2.CheckBoxDate.Checked = TRUE) Then
-  Begin
+  if (Form2.CheckBoxDate.Checked = TRUE) then
+  begin
     Form1.GLabelDate.Visible := TRUE;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
-  If (Form2.CheckBoxDate.Checked = false) Then
-  Begin
+  end;
+  if (Form2.CheckBoxDate.Checked = false) then
+  begin
     Form1.GLabelDate.Visible := false;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
+  end;
 
       // День
   Form2.CheckBoxDay.Checked := Ini.ReadBool('Option', Form2.CheckBoxDay.Name, false);
   Form2.CheckBoxDayClick(self);
-  If (Form2.CheckBoxDay.Checked = TRUE) Then
-  Begin
+  if (Form2.CheckBoxDay.Checked = TRUE) then
+  begin
     Form1.HLabelDay.Visible := TRUE;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
-  If (Form2.CheckBoxDay.Checked = false) Then
-  Begin
+  end;
+  if (Form2.CheckBoxDay.Checked = false) then
+  begin
     Form1.HLabelDay.Visible := false;
     application.ProcessMessages;
     RestoreStringInfo;
     application.ProcessMessages;
-  End;
+  end;
 
   // Цветная иконка
   Form2.CheckBoxColorTrayIcon.Checked := Ini.ReadBool('Option', Form2.CheckBoxColorTrayIcon.Name, false);
-  Try
-    If Form2.CheckBoxColorTrayIcon.Checked = TRUE Then
-    Begin
+  try
+    if Form2.CheckBoxColorTrayIcon.Checked = TRUE then
+    begin
       Form1.TrayIcon1.IconIndex := 2;
       application.ProcessMessages;
-    End;
+    end;
 
-    If Form2.CheckBoxColorTrayIcon.Checked = false Then
-    Begin
-      If DarkModeIsEnabled = TRUE Then
-      Begin
-        If SystemUsesLightTheme = false Then
+    if Form2.CheckBoxColorTrayIcon.Checked = false then
+    begin
+      if DarkModeIsEnabled = TRUE then
+      begin
+        if SystemUsesLightTheme = false then
           Form1.TrayIcon1.IconIndex := 1;
-        If SystemUsesLightTheme = TRUE Then
+        if SystemUsesLightTheme = TRUE then
           Form1.TrayIcon1.IconIndex := 0;
         application.ProcessMessages;
-      End;
+      end;
 
-      If DarkModeIsEnabled = false Then
-      Begin
-        If SystemUsesLightTheme = TRUE Then
+      if DarkModeIsEnabled = false then
+      begin
+        if SystemUsesLightTheme = TRUE then
           Form1.TrayIcon1.IconIndex := 0;
-        If SystemUsesLightTheme = false Then
+        if SystemUsesLightTheme = false then
           Form1.TrayIcon1.IconIndex := 1;
         application.ProcessMessages;
-      End;
-    End;
+      end;
+    end;
     RestoreStringInfo;
     application.ProcessMessages;
-  Except
-  End;
+  except
+  end;
 
   // Блокировка положения окна
   Form2.CheckBoxIgnoreMouse.Checked := Ini.ReadBool('Option', CheckBoxIgnoreMouse.Name, false);
@@ -642,257 +649,257 @@ Begin
   Form2.CheckBoxAutoColor.Checked := Ini.ReadBool('Option', Form2.CheckBoxAutoColor.Name, false);
   Form2.CheckBoxAutoColorClick(self);
 
-  If Form2.CheckBoxAutoColor.Checked = false Then
-  Begin
+  if Form2.CheckBoxAutoColor.Checked = false then
+  begin
     Form2.ColorBoxNumber.Selected := Ini.ReadInteger('Option', Form2.ColorBoxNumber.Name, clWhite);
     Form2.ColorBoxNumberClick(Self);
-  End;
+  end;
 
   Ini.Free;
-End;
+end;
 
-Procedure TForm2.PageControl1MouseLeave(Sender: TObject);
-Begin
+procedure TForm2.PageControl1MouseLeave(Sender: TObject);
+begin
   Screen.Cursor := crDefault;
-End;
+end;
 
-Procedure TForm2.PageControl1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
-Var
+procedure TForm2.PageControl1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+var
   TabIndex: Integer;
-Begin
+begin
   // Проверяем, находится ли курсор над вкладкой
   TabIndex := TPageControl(Sender).IndexOfTabAt(X, Y);
 
-  If TabIndex >= 0 Then
+  if TabIndex >= 0 then
     Screen.Cursor := crHandPoint  // Курсор для вкладок
-  Else
+  else
     Screen.Cursor := crDefault;   // Обычный курсор
-End;
+end;
 
-Procedure TForm2.FormCreate(Sender: TObject);
-Begin
+procedure TForm2.FormCreate(Sender: TObject);
+begin
   Form1.Globload;
   PageControl1.ActivePageIndex := 0;
   OnMouseWheel := FormMouseWheel;
-End;
+end;
 
-Procedure TForm2.FormMouseWheel(Sender: TObject; Shift: TShiftState; WheelDelta: Integer; MousePos: TPoint; Var Handled: Boolean);
-Var
+procedure TForm2.FormMouseWheel(Sender: TObject; Shift: TShiftState; WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
+var
   ComponentAtPosition: TControl;
-Begin
+begin
   // Получаем компонент, находящийся под курсором мыши
   ComponentAtPosition := FindDragTarget(Mouse.CursorPos, False);
 
   // Проверяем, является ли компонент типом TSpinEdit
-  If Assigned(ComponentAtPosition) And (ComponentAtPosition Is TSpinEdit) Then
-  Begin
-    With TComponent(ComponentAtPosition) As TSpinEdit Do
-    Begin
+  if Assigned(ComponentAtPosition) and (ComponentAtPosition is TSpinEdit) then
+  begin
+    with TComponent(ComponentAtPosition) as TSpinEdit do
+    begin
       SetFocus();
-      If WheelDelta > 0 Then
+      if WheelDelta > 0 then
         Value := Value + 1
-      Else
+      else
         Value := Value - 1;
 
       SelectAll(); // Выделение текста
 
       Handled := True;
-    End;
-  End;
-End;
+    end;
+  end;
+end;
 
-Procedure TForm2.IPFontSizeChange(Sender: TObject);
-Begin
+procedure TForm2.IPFontSizeChange(Sender: TObject);
+begin
   Form1.BLabelGetIP.Font.Size := IPFontSize.Value;
   RestoreStringInfo;
-End;
+end;
 
-Procedure TForm2.IPFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-Begin
-  If Not (Key In [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) Then
-  Begin
+procedure TForm2.IPFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+  if not (Key in [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) then
+  begin
     Key := 0;
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.IPFontSizeKeyPress(Sender: TObject; Var Key: Char);
-Begin
+procedure TForm2.IPFontSizeKeyPress(Sender: TObject; var Key: Char);
+begin
   Key := #0;
-End;
+end;
 
-Procedure tForm2.CreateAutoStart(Enabled: Boolean);
-Var
+procedure tForm2.CreateAutoStart(Enabled: Boolean);
+var
   Reg: TRegistry;
-Begin
-  If Enabled = true Then
-  Begin
+begin
+  if Enabled = true then
+  begin
     Reg := TRegistry.Create;
     Reg.RootKey := HKEY_CURRENT_USER;
     Reg.OpenKey('Software\Microsoft\Windows\CurrentVersion\Run', TRUE);
     Reg.WriteString(Application.Title, ParamStr(0));
     Reg.CloseKey;
     Reg.Free;
-  End;
+  end;
 
-  If Enabled = false Then
-  Begin
+  if Enabled = false then
+  begin
     Reg := TRegistry.Create;
     Reg.RootKey := HKEY_CURRENT_USER;
     Reg.OpenKey('Software\Microsoft\Windows\CurrentVersion\Run', TRUE);
     Reg.DeleteValue(Application.Title);
     Reg.CloseKey;
     Reg.Free;
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.CheckBoxAutoColorClick(Sender: TObject);
-Begin
-  ColorBoxNumber.Enabled := Not CheckBoxAutoColor.Checked;
+procedure TForm2.CheckBoxAutoColorClick(Sender: TObject);
+begin
+  ColorBoxNumber.Enabled := not CheckBoxAutoColor.Checked;
   ColorBoxNumberClick(self);
   Form1.Timer3.Enabled := CheckBoxAutoColor.Checked;
-End;
+end;
 
-Procedure TForm2.CheckBoxAutostartClick(Sender: TObject);
-Begin
-  If CheckBoxAutostart.Checked Then
-  Begin
+procedure TForm2.CheckBoxAutostartClick(Sender: TObject);
+begin
+  if CheckBoxAutostart.Checked then
+  begin
     CreateAutoStart(True);
-  End
-  Else
-  Begin
+  end
+  else
+  begin
     CreateAutoStart(false);
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.CheckBoxBatteryClick(Sender: TObject);
-Begin
+procedure TForm2.CheckBoxBatteryClick(Sender: TObject);
+begin
   BatteryFontSize.Enabled := CheckBoxBattery.Checked;
   CheckBatteryFontBold.Enabled := CheckBoxBattery.Checked;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.CheckBoxColorTrayIconClick(Sender: TObject);
-Begin
-  Try
-    If Form2.CheckBoxColorTrayIcon.Checked = TRUE Then
-    Begin
+procedure TForm2.CheckBoxColorTrayIconClick(Sender: TObject);
+begin
+  try
+    if Form2.CheckBoxColorTrayIcon.Checked = TRUE then
+    begin
       Form1.TrayIcon1.IconIndex := 2;
       application.ProcessMessages;
-    End;
+    end;
 
-    If Form2.CheckBoxColorTrayIcon.Checked = false Then
-    Begin
-      If DarkModeIsEnabled = TRUE Then
-      Begin
-        If SystemUsesLightTheme = false Then
+    if Form2.CheckBoxColorTrayIcon.Checked = false then
+    begin
+      if DarkModeIsEnabled = TRUE then
+      begin
+        if SystemUsesLightTheme = false then
           Form1.TrayIcon1.IconIndex := 1;
-        If SystemUsesLightTheme = TRUE Then
+        if SystemUsesLightTheme = TRUE then
           Form1.TrayIcon1.IconIndex := 0;
         application.ProcessMessages;
-      End;
+      end;
 
-      If DarkModeIsEnabled = false Then
-      Begin
-        If SystemUsesLightTheme = TRUE Then
+      if DarkModeIsEnabled = false then
+      begin
+        if SystemUsesLightTheme = TRUE then
           Form1.TrayIcon1.IconIndex := 0;
-        If SystemUsesLightTheme = false Then
+        if SystemUsesLightTheme = false then
           Form1.TrayIcon1.IconIndex := 1;
         application.ProcessMessages;
-      End;
-    End;
-  Except
-  End;
-End;
+      end;
+    end;
+  except
+  end;
+end;
 
-Procedure TForm2.RestoreStringInfo;
-Begin
+procedure TForm2.RestoreStringInfo;
+begin
   Form1.ClientHeight := 0;
   Form1.ClientHeight := Form1.ClientHeight + 5;
-  If Form2.CheckBoxWindowsVersion.Checked Then
-  Begin
+  if Form2.CheckBoxWindowsVersion.Checked then
+  begin
     Form1.ClientHeight := Form1.ClientHeight + Form1.LabelWindowsVersion.Height;
-  End;
-  If Form2.CheckBoxComputerName.Checked Then
-  Begin
+  end;
+  if Form2.CheckBoxComputerName.Checked then
+  begin
     Form1.ClientHeight := Form1.ClientHeight + Form1.ALabelUserName.Height;
-  End;
-  If Form2.CheckBoxIP.Checked Then
-  Begin
+  end;
+  if Form2.CheckBoxIP.Checked then
+  begin
     Form1.ClientHeight := Form1.ClientHeight + Form1.BLabelGetIP.Height;
-  End;
-  If CheckBoxCPU.Checked Then
-  Begin
+  end;
+  if CheckBoxCPU.Checked then
+  begin
     Form1.ClientHeight := Form1.ClientHeight + Form1.CLabelCPU.Height;
-  End;
-  If CheckBoxRAM.Checked Then
-  Begin
+  end;
+  if CheckBoxRAM.Checked then
+  begin
     Form1.ClientHeight := Form1.ClientHeight + Form1.DLabelRam.Height;
-  End;
-  If Form2.CheckBoxBattery.Checked Then
-  Begin
+  end;
+  if Form2.CheckBoxBattery.Checked then
+  begin
     Form1.ClientHeight := Form1.ClientHeight + Form1.ELabelBattery.Height;
-  End;
-  If Form2.CheckBoxDateTime.Checked Then
-  Begin
+  end;
+  if Form2.CheckBoxDateTime.Checked then
+  begin
     Form1.ClientHeight := Form1.ClientHeight + Form1.FLabelDateTime.Height;
-  End;
-  If Form2.CheckBoxDate.Checked Then
-  Begin
+  end;
+  if Form2.CheckBoxDate.Checked then
+  begin
     Form1.ClientHeight := Form1.ClientHeight + Form1.GLabelDate.Height;
-  End;
-  If Form2.CheckBoxDay.Checked Then
-  Begin
+  end;
+  if Form2.CheckBoxDay.Checked then
+  begin
     Form1.ClientHeight := Form1.ClientHeight + Form1.HLabelDay.Height;
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.WindowsVersionFontSizeChange(Sender: TObject);
-Begin
+procedure TForm2.WindowsVersionFontSizeChange(Sender: TObject);
+begin
   Form1.LabelWindowsVersion.Font.Size := WindowsVersionFontSize.Value;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.WindowsVersionFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-Begin
-  If Not (Key In [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) Then
-  Begin
+procedure TForm2.WindowsVersionFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+  if not (Key in [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) then
+  begin
     Key := 0;
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.WindowsVersionFontSizeKeyPress(Sender: TObject; Var Key: Char);
-Begin
+procedure TForm2.WindowsVersionFontSizeKeyPress(Sender: TObject; var Key: Char);
+begin
   Key := #0;
-End;
+end;
 
-Procedure TForm2.CheckBoxComputerNameClick(Sender: TObject);
-Begin
+procedure TForm2.CheckBoxComputerNameClick(Sender: TObject);
+begin
   ComputerNameFontSize.Enabled := CheckBoxComputerName.Checked;
   CheckComputerNameFontBold.Enabled := CheckBoxComputerName.Checked;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.CheckBoxCPUClick(Sender: TObject);
-Begin
+procedure TForm2.CheckBoxCPUClick(Sender: TObject);
+begin
   CPUFontSize.Enabled := CheckBoxCPU.Checked;
   CheckCPUFontBold.Enabled := CheckBoxCPU.Checked;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.CheckBoxDateClick(Sender: TObject);
-Begin
+procedure TForm2.CheckBoxDateClick(Sender: TObject);
+begin
   DateFontSize.Enabled := CheckBoxDate.Checked;
   CheckDateFontBold.Enabled := CheckBoxDate.Checked;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.CheckBoxDateTimeClick(Sender: TObject);
-Begin
+procedure TForm2.CheckBoxDateTimeClick(Sender: TObject);
+begin
   DateTimeFontSize.Enabled := CheckBoxDateTime.Checked;
   CheckDateTimeFontBold.Enabled := CheckBoxDateTime.Checked;
   CheckBoxZero.Enabled := CheckBoxDateTime.Checked;
@@ -900,246 +907,246 @@ Begin
   CheckBoxShowSeconds.Enabled := CheckBoxDateTime.Checked;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.CheckBoxDayClick(Sender: TObject);
-Begin
+procedure TForm2.CheckBoxDayClick(Sender: TObject);
+begin
   DayFontSize.Enabled := CheckBoxDay.Checked;
   CheckDayFontBold.Enabled := CheckBoxDay.Checked;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.CheckBoxFullWindowsVersionClick(Sender: TObject);
-Begin
-  If Form2.CheckBoxFullWindowsVersion.Checked Then
-  Begin
+procedure TForm2.CheckBoxFullWindowsVersionClick(Sender: TObject);
+begin
+  if Form2.CheckBoxFullWindowsVersion.Checked then
+  begin
     Form1.LabelWindowsVersion.Caption := Trim(GetWindowsInfoShort);
-  End;
-  If Form2.CheckBoxFullWindowsVersion.Checked = false Then
-  Begin
+  end;
+  if Form2.CheckBoxFullWindowsVersion.Checked = false then
+  begin
     Form1.LabelWindowsVersion.Caption := Trim(GetWindowsInfoShortSmall);
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.CheckBoxIgnoreMouseClick(Sender: TObject);
-Begin
+procedure TForm2.CheckBoxIgnoreMouseClick(Sender: TObject);
+begin
   Form1.UpdateCursorForAllLabels;
-End;
+end;
 
-Procedure TForm2.CheckBoxIPClick(Sender: TObject);
-Begin
+procedure TForm2.CheckBoxIPClick(Sender: TObject);
+begin
   IPFontSize.Enabled := CheckBoxIP.Checked;
   CheckIPFontBold.Enabled := CheckBoxIP.Checked;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.CheckBoxRAMClick(Sender: TObject);
-Begin
+procedure TForm2.CheckBoxRAMClick(Sender: TObject);
+begin
   RAMFontSize.Enabled := CheckBoxRAM.Checked;
   CheckRAMFontBold.Enabled := CheckBoxRAM.Checked;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.CheckBoxWindowsVersionClick(Sender: TObject);
-Begin
+procedure TForm2.CheckBoxWindowsVersionClick(Sender: TObject);
+begin
   WindowsVersionFontSize.Enabled := CheckBoxWindowsVersion.Checked;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.RAMFontSizeChange(Sender: TObject);
-Begin
+procedure TForm2.RAMFontSizeChange(Sender: TObject);
+begin
   Form1.DLabelRAM.Font.Size := RAMFontSize.Value;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.RAMFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-Begin
-  If Not (Key In [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) Then
-  Begin
+procedure TForm2.RAMFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+  if not (Key in [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) then
+  begin
     Key := 0;
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.RAMFontSizeKeyPress(Sender: TObject; Var Key: Char);
-Begin
+procedure TForm2.RAMFontSizeKeyPress(Sender: TObject; var Key: Char);
+begin
   Key := #0;
-End;
+end;
 
-Procedure TForm2.DateFontSizeChange(Sender: TObject);
-Begin
+procedure TForm2.DateFontSizeChange(Sender: TObject);
+begin
   Form1.GLabelDate.Font.Size := DateFontSize.Value;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.DateFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-Begin
-  If Not (Key In [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) Then
-  Begin
+procedure TForm2.DateFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+  if not (Key in [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) then
+  begin
     Key := 0;
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.DateFontSizeKeyPress(Sender: TObject; Var Key: Char);
-Begin
+procedure TForm2.DateFontSizeKeyPress(Sender: TObject; var Key: Char);
+begin
   Key := #0;
-End;
+end;
 
-Procedure TForm2.DateTimeFontSizeChange(Sender: TObject);
-Begin
+procedure TForm2.DateTimeFontSizeChange(Sender: TObject);
+begin
   Form1.FLabelDateTime.Font.Size := DateTimeFontSize.Value;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.DateTimeFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-Begin
-  If Not (Key In [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) Then
-  Begin
+procedure TForm2.DateTimeFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+  if not (Key in [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) then
+  begin
     Key := 0;
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.DateTimeFontSizeKeyPress(Sender: TObject; Var Key: Char);
-Begin
+procedure TForm2.DateTimeFontSizeKeyPress(Sender: TObject; var Key: Char);
+begin
   Key := #0;
-End;
+end;
 
-Procedure TForm2.DayFontSizeChange(Sender: TObject);
-Begin
+procedure TForm2.DayFontSizeChange(Sender: TObject);
+begin
   Form1.HLabelDay.Font.Size := DayFontSize.Value;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.DayFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-Begin
-  If Not (Key In [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) Then
-  Begin
+procedure TForm2.DayFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+  if not (Key in [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) then
+  begin
     Key := 0;
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.DayFontSizeKeyPress(Sender: TObject; Var Key: Char);
-Begin
+procedure TForm2.DayFontSizeKeyPress(Sender: TObject; var Key: Char);
+begin
   Key := #0;
-End;
+end;
 
-Procedure TForm2.CheckBatteryFontBoldClick(Sender: TObject);
-Begin
-  If CheckBatteryFontBold.Checked Then
-  Begin
+procedure TForm2.CheckBatteryFontBoldClick(Sender: TObject);
+begin
+  if CheckBatteryFontBold.Checked then
+  begin
     Form1.ELabelBattery.Font.Style := Form1.ELabelBattery.Font.Style + [fsBold];
-  End;
+  end;
 
-  If CheckBatteryFontBold.Checked = false Then
-  Begin
+  if CheckBatteryFontBold.Checked = false then
+  begin
     Form1.ELabelBattery.Font.Style := Form1.ELabelBattery.Font.Style - [fsBold];
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.CheckComputerNameFontBoldClick(Sender: TObject);
-Begin
-  If CheckComputerNameFontBold.Checked Then
-  Begin
+procedure TForm2.CheckComputerNameFontBoldClick(Sender: TObject);
+begin
+  if CheckComputerNameFontBold.Checked then
+  begin
     Form1.ALabelUserName.Font.Style := Form1.ALabelUserName.Font.Style + [fsBold];
-  End;
+  end;
 
-  If CheckComputerNameFontBold.Checked = false Then
-  Begin
+  if CheckComputerNameFontBold.Checked = false then
+  begin
     Form1.ALabelUserName.Font.Style := Form1.ALabelUserName.Font.Style - [fsBold];
-  End;
+  end;
 
-End;
+end;
 
-Procedure TForm2.CheckCPUFontBoldClick(Sender: TObject);
-Begin
-  If CheckCPUFontBold.Checked Then
-  Begin
+procedure TForm2.CheckCPUFontBoldClick(Sender: TObject);
+begin
+  if CheckCPUFontBold.Checked then
+  begin
     Form1.CLabelCPU.Font.Style := Form1.CLabelCPU.Font.Style + [fsBold];
-  End;
+  end;
 
-  If CheckCPUFontBold.Checked = false Then
-  Begin
+  if CheckCPUFontBold.Checked = false then
+  begin
     Form1.CLabelCPU.Font.Style := Form1.CLabelCPU.Font.Style - [fsBold];
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.CheckDateFontBoldClick(Sender: TObject);
-Begin
-  If CheckDateFontBold.Checked Then
-  Begin
+procedure TForm2.CheckDateFontBoldClick(Sender: TObject);
+begin
+  if CheckDateFontBold.Checked then
+  begin
     Form1.GLabelDate.Font.Style := Form1.GLabelDate.Font.Style + [fsBold];
-  End;
+  end;
 
-  If CheckDateFontBold.Checked = false Then
-  Begin
+  if CheckDateFontBold.Checked = false then
+  begin
     Form1.GLabelDate.Font.Style := Form1.GLabelDate.Font.Style - [fsBold];
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.CheckDateTimeFontBoldClick(Sender: TObject);
-Begin
+procedure TForm2.CheckDateTimeFontBoldClick(Sender: TObject);
+begin
 
-  If CheckDateTimeFontBold.Checked Then
-  Begin
+  if CheckDateTimeFontBold.Checked then
+  begin
     Form1.FLabelDateTime.Font.Style := Form1.FLabelDateTime.Font.Style + [fsBold];
-  End;
+  end;
 
-  If CheckDateTimeFontBold.Checked = false Then
-  Begin
+  if CheckDateTimeFontBold.Checked = false then
+  begin
     Form1.FLabelDateTime.Font.Style := Form1.FLabelDateTime.Font.Style - [fsBold];
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.CheckDayFontBoldClick(Sender: TObject);
-Begin
-  If CheckDayFontBold.Checked Then
-  Begin
+procedure TForm2.CheckDayFontBoldClick(Sender: TObject);
+begin
+  if CheckDayFontBold.Checked then
+  begin
     Form1.HLabelDay.Font.Style := Form1.HLabelDay.Font.Style + [fsBold];
-  End;
+  end;
 
-  If CheckDayFontBold.Checked = false Then
-  Begin
+  if CheckDayFontBold.Checked = false then
+  begin
     Form1.HLabelDay.Font.Style := Form1.HLabelDay.Font.Style - [fsBold];
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.CheckIPFontBoldClick(Sender: TObject);
-Begin
-  If CheckIPFontBold.Checked Then
-  Begin
+procedure TForm2.CheckIPFontBoldClick(Sender: TObject);
+begin
+  if CheckIPFontBold.Checked then
+  begin
     Form1.BLabelGetIP.Font.Style := Form1.BLabelGetIP.Font.Style + [fsBold];
-  End;
+  end;
 
-  If CheckIPFontBold.Checked = false Then
-  Begin
+  if CheckIPFontBold.Checked = false then
+  begin
     Form1.BLabelGetIP.Font.Style := Form1.BLabelGetIP.Font.Style - [fsBold];
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.CheckRAMFontBoldClick(Sender: TObject);
-Begin
-  If CheckRAMFontBold.Checked Then
-  Begin
+procedure TForm2.CheckRAMFontBoldClick(Sender: TObject);
+begin
+  if CheckRAMFontBold.Checked then
+  begin
     Form1.DLabelRAM.Font.Style := Form1.DLabelRAM.Font.Style + [fsBold];
-  End;
+  end;
 
-  If CheckRAMFontBold.Checked = false Then
-  Begin
+  if CheckRAMFontBold.Checked = false then
+  begin
     Form1.DLabelRAM.Font.Style := Form1.DLabelRAM.Font.Style - [fsBold];
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.ColorBoxNumberClick(Sender: TObject);
-Begin
-  If CheckBoxAutoColor.Checked = false Then
-  Begin
+procedure TForm2.ColorBoxNumberClick(Sender: TObject);
+begin
+  if CheckBoxAutoColor.Checked = false then
+  begin
 
     Form1.LabelWindowsVersion.Font.Color := Form2.ColorBoxNumber.Selected;
     Form1.ALabelUserName.Font.Color := Form2.ColorBoxNumber.Selected;
@@ -1152,62 +1159,62 @@ Begin
 
     Form1.GLabelDate.Font.Color := Form2.ColorBoxNumber.Selected;
     Form1.HLabelDay.Font.Color := Form2.ColorBoxNumber.Selected;
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.ComputerNameFontSizeChange(Sender: TObject);
-Begin
+procedure TForm2.ComputerNameFontSizeChange(Sender: TObject);
+begin
   Form1.ALabelUserName.Font.Size := ComputerNameFontSize.Value;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.ComputerNameFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-Begin
-  If Not (Key In [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) Then
-  Begin
+procedure TForm2.ComputerNameFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+  if not (Key in [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) then
+  begin
     Key := 0;
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.ComputerNameFontSizeKeyPress(Sender: TObject; Var Key: Char);
-Begin
+procedure TForm2.ComputerNameFontSizeKeyPress(Sender: TObject; var Key: Char);
+begin
   Key := #0;
-End;
+end;
 
-Procedure TForm2.CPUFontSizeChange(Sender: TObject);
-Begin
+procedure TForm2.CPUFontSizeChange(Sender: TObject);
+begin
   Form1.CLabelCPU.Font.Size := CPUFontSize.Value;
   RestoreStringInfo;
   application.ProcessMessages;
-End;
+end;
 
-Procedure TForm2.CPUFontSizeKeyDown(Sender: TObject; Var Key: Word; Shift: TShiftState);
-Begin
-  If Not (Key In [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) Then
-  Begin
+procedure TForm2.CPUFontSizeKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+begin
+  if not (Key in [VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, VK_HOME, VK_END, VK_BACK, VK_DELETE, VK_TAB, VK_RETURN, VK_ESCAPE]) then
+  begin
     Key := 0;
-  End;
-End;
+  end;
+end;
 
-Procedure TForm2.CPUFontSizeKeyPress(Sender: TObject; Var Key: Char);
-Begin
+procedure TForm2.CPUFontSizeKeyPress(Sender: TObject; var Key: Char);
+begin
   Key := #0;
-End;
+end;
 
-Procedure TForm2.RadioButtonDefaultPositionClick(Sender: TObject);
-Begin
+procedure TForm2.RadioButtonDefaultPositionClick(Sender: TObject);
+begin
   RadioButtonDefaultPosition.Checked := TRUE;
   RadioButtonLastPosition.Checked := false;
   RadioButtonRight.Checked := false;
  { Form1.Left := Screen.Width - Form1.Width - 20;
   Form1.Top := Screen.Height - Form1.Height - 50;}
-End;
+end;
 
-Procedure TForm2.RadioButtonLastPositionClick(Sender: TObject);
-Var
+procedure TForm2.RadioButtonLastPositionClick(Sender: TObject);
+var
   Ini: TMemIniFile;
-Begin
+begin
   Ini := TMemIniFile.Create(Form1.PortablePath);
   RadioButtonLastPosition.Checked := TRUE;
   RadioButtonDefaultPosition.Checked := false;
@@ -1215,12 +1222,12 @@ Begin
   Form1.Top := Ini.ReadInteger('Option', 'Top', Form1.Top);
   Form1.Left := Ini.ReadInteger('Option', 'Left', Form1.Left);
   Ini.Free;
-End;
+end;
 
-Procedure TForm2.RadioButtonRightClick(Sender: TObject);
-Var
+procedure TForm2.RadioButtonRightClick(Sender: TObject);
+var
   Ini: TMemIniFile;
-Begin
+begin
   Ini := TMemIniFile.Create(Form1.PortablePath);
   RadioButtonLastPosition.Checked := false;
   RadioButtonDefaultPosition.Checked := false;
@@ -1228,7 +1235,7 @@ Begin
   Form1.Top := Ini.ReadInteger('Option', 'Top', Form1.Top);
   //Form1.Left := Screen.Width - Form1.Width - 10;
   Ini.Free;
-End;
+end;
 
-End.
+end.
 

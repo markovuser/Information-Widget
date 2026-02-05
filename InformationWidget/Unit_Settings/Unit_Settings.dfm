@@ -27,8 +27,6 @@ object Form2: TForm2
     Height = 35
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 406
-    ExplicitWidth = 624
     object ButtonSave: TButton
       Left = 4
       Top = 6
@@ -45,7 +43,6 @@ object Form2: TForm2
       ParentFont = False
       TabOrder = 0
       OnClick = ButtonSaveClick
-      ExplicitWidth = 616
     end
   end
   object TabControlBody: TTabControl
@@ -55,8 +52,6 @@ object Form2: TForm2
     Height = 306
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 624
-    ExplicitHeight = 406
     object TabControl1: TTabControl
       Left = 4
       Top = 6
@@ -64,7 +59,6 @@ object Form2: TForm2
       Height = 88
       Align = alTop
       TabOrder = 0
-      ExplicitWidth = 616
     end
     object TabControl2: TTabControl
       Left = 4
@@ -73,7 +67,6 @@ object Form2: TForm2
       Height = 88
       Align = alTop
       TabOrder = 1
-      ExplicitWidth = 616
     end
     object TabControl3: TTabControl
       Left = 4
@@ -82,7 +75,6 @@ object Form2: TForm2
       Height = 88
       Align = alTop
       TabOrder = 2
-      ExplicitWidth = 616
     end
   end
   object PageControl1: TPageControl
@@ -96,8 +88,6 @@ object Form2: TForm2
     TabWidth = 100
     OnMouseLeave = PageControl1MouseLeave
     OnMouseMove = PageControl1MouseMove
-    ExplicitWidth = 624
-    ExplicitHeight = 406
     object TabSheet1: TTabSheet
       Caption = #1054#1089#1085#1086#1074#1085#1099#1077
       object GroupBox2: TGroupBox
@@ -108,7 +98,6 @@ object Form2: TForm2
         Align = alTop
         Caption = #1042#1080#1076
         TabOrder = 0
-        ExplicitWidth = 616
         object CheckBoxColorTrayIcon: TCheckBox
           Left = 4
           Top = 17
@@ -163,7 +152,6 @@ object Form2: TForm2
         Align = alTop
         Caption = #1055#1086#1083#1086#1078#1077#1085#1080#1077' '#1086#1082#1085#1072
         TabOrder = 1
-        ExplicitWidth = 616
         object RadioButtonDefaultPosition: TRadioButton
           Left = 4
           Top = 17
@@ -205,7 +193,6 @@ object Form2: TForm2
         Align = alTop
         Caption = #1040#1074#1090#1086#1079#1072#1075#1088#1091#1079#1082#1072
         TabOrder = 2
-        ExplicitWidth = 616
         object CheckBoxAutostart: TCheckBox
           Left = 4
           Top = 17
